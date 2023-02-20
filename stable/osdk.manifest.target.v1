@@ -3,6 +3,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "A representation of a target manifest for OSDK",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "id": {
             "description": "The unique identifier for this manifest",
