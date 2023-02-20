@@ -22,14 +22,14 @@
         },
         "props": {
             "type": "object",
-            "description": "A list of properties that this component provides",
+            "description": "An array of properties that this component provides",
             "patternProperties": {
                 ".*": {}
             }
         },
         "tools": {
             "type": "object",
-            "description": "A list of tools that this component provides",
+            "description": "An array of tools that this component provides",
             "patternProperties": {
                 ".*": {
                     "type": "object",
@@ -58,24 +58,24 @@
         },
         "enableIf": {
             "type": "object",
-            "description": "A list of conditions that must be met for this component to be enabled",
+            "description": "An array of conditions that must be met for this component to be enabled",
             "patternProperties": {
                 ".*": {
-                    "type": "list",
+                    "type": "array",
                     "items": {}
                 }
             }
         },
         "requires": {
             "type": "array",
-            "description": "A list of features that this component requires",
+            "description": "An array of features that this component requires",
             "items": {
                 "type": "string"
             }
         },
         "provides": {
             "type": "array",
-            "description": "A list of features that this component provides (note: by default all components provides they own id as a feature)",
+            "description": "An array of features that this component provides (note: by default all components provides they own id as a feature)",
             "items": {
                 "type": "string"
             }
