@@ -9,6 +9,10 @@
     ],
     "additionalProperties": false,
     "properties": {
+        "$schema": {
+            "description": "The schema that this manifest conforms to",
+            "type": "string"
+        },
         "id": {
             "description": "The unique identifier for this manifest",
             "type": "string"
