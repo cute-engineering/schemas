@@ -1,5 +1,5 @@
 {
-    "$id": "https://schema.cute.engineering/stable/osdk.manifest.project.v1",
+    "$id": "https://schemas.cute.engineering/stable/osdk.manifest.project.v1",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "A representation of a component project for OSDK",
     "type": "object",

@@ -1,12 +1,8 @@
 {
-    "$id": "https://schemas.cute.engineering/stable/osdk.manifest.component.v1",
+    "$id": "https://schemas.cute.engineering/stable/cutekit.manifest.target.v1",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "A representation of a component manifest for OSDK",
+    "description": "A representation of a target manifest for CuteKit",
     "type": "object",
-    "required": [
-        "id",
-        "type"
-    ],
     "additionalProperties": false,
     "properties": {
         "$schema": {
@@ -27,19 +23,18 @@
         },
         "props": {
             "type": "object",
-            "description": "An array of properties that this component provides",
+            "description": "A list of properties that this target provides",
             "patternProperties": {
                 ".*": {}
             }
         },
         "tools": {
             "type": "object",
-            "description": "An array of tools that this component provides",
+            "description": "A list of tools that this target provides",
             "patternProperties": {
                 ".*": {
                     "type": "object",
                     "properties": {
-                        "additionalProperties": false,
                         "cmd": {
                             "description": "Command to run the tool",
                             "type": "string"
@@ -62,35 +57,13 @@
                 }
             }
         },
-        "enableIf": {
+        "routing": {
             "type": "object",
-            "description": "An array of conditions that must be met for this component to be enabled",
+            "description": "A list of feature to component mappings",
             "patternProperties": {
                 ".*": {
-                    "type": "array",
-                    "items": {}
+                    "type": "string"
                 }
-            }
-        },
-        "requires": {
-            "type": "array",
-            "description": "An array of features that this component requires",
-            "items": {
-                "type": "string"
-            }
-        },
-        "provides": {
-            "type": "array",
-            "description": "An array of features that this component provides (note: by default all components provides they own id as a feature)",
-            "items": {
-                "type": "string"
-            }
-        },
-        "subdirs": {
-            "type": "array",
-            "description": "An array of subdirectories that contains source files for this component",
-            "items": {
-                "type": "string"
             }
         }
     }
