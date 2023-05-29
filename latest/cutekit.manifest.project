@@ -3,6 +3,9 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "A representation of a component project for CuteKit",
     "type": "object",
+    "required": [
+        "$schema"
+    ],
     "additionalProperties": false,
     "properties": {
         "$schema": {
