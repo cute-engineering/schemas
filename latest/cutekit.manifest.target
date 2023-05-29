@@ -1,5 +1,5 @@
 {
-    "$id": "https://schemas.cute.engineering/stable/cutekit.manifest.target.v1",
+    "$id": "https://schemas.cute.engineering/stable/cutekit.manifest.target",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "A representation of a target manifest for CuteKit",
     "type": "object",
@@ -10,7 +10,7 @@
     "properties": {
         "$schema": {
             "description": "The schema that this manifest conforms to",
-            "type": "string"
+            "const": "https://schemas.cute.engineering/stable/cutekit.manifest.target"
         },
         "id": {
             "description": "The unique identifier for this manifest",
