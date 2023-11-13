@@ -86,6 +86,13 @@
                 "type": "string"
             }
         },
+        "injects": {
+            "type": "array",
+            "description": "An array of features that this component will inject itself into",
+            "items": {
+                "type": "string"
+            }
+        },
         "subdirs": {
             "type": "array",
             "description": "An array of subdirectories that contains source files for this component",
