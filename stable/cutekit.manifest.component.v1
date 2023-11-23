@@ -5,13 +5,14 @@
     "type": "object",
     "required": [
         "id",
-        "type"
+        "type",
+        "$schema"
     ],
     "additionalProperties": false,
     "properties": {
         "$schema": {
             "description": "The schema that this manifest conforms to",
-            "type": "string"
+            "const": "https://schemas.cute.engineering/stable/cutekit.manifest.component.v1"
         },
         "id": {
             "description": "The unique identifier for this manifest",

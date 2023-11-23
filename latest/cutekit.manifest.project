@@ -1,13 +1,16 @@
 {
-    "$id": "https://schemas.cute.engineering/stable/cutekit.manifest.project.v1",
+    "$id": "https://schemas.cute.engineering/stable/cutekit.manifest.project",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "A representation of a component project for CuteKit",
     "type": "object",
+    "required": [
+        "$schema"
+    ],
     "additionalProperties": false,
     "properties": {
         "$schema": {
             "description": "The schema that this manifest conforms to",
-            "type": "string"
+            "const": "https://schemas.cute.engineering/stable/cutekit.manifest.project"
         },
         "id": {
             "description": "The unique identifier for this manifest",
