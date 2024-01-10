@@ -88,6 +88,7 @@
         },
         "injects": {
             "type": "array",
+            "$comment": "@since(0.7)",
             "description": "An array of features that this component will inject itself into",
             "items": {
                 "type": "string"
