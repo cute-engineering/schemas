@@ -29,6 +29,19 @@
                     "type": "object",
                     "properties": {
                         "additionalProperties": false,
+                        "id": {
+                            "$comment": "@since(0.7)",
+                            "description": "The unique identifier for this dependency",
+                            "type": "string"
+                        },
+                        "names": {
+                            "$comment": "@since(0.7)",
+                            "description": "Name under which the extern is installed  might be the package name on linux or MacOS",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
                         "git": {
                             "description": "The git repository to clone",
                             "type": "string"
