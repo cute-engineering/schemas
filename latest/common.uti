@@ -1,0 +1,53 @@
+{
+    "$id": "https://schemas.cute.engineering/stable/common.uti.v1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "A representation of a Uniform Typ Identifier repository",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "export": {
+            "type": "array",
+            "description": "List of exported UTIs",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The UTI identifier"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A short description of the UTI"
+                    },
+                    "conforms": {
+                        "type": "array",
+                        "description": "List of UTIs that this UTI conforms to",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "references": {
+                        "type": "array",
+                        "description": "Relevant URLs like RFCs, specifications, etc",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "specifications": {
+                        "type": "array",
+                        "description": "List of MIME and file extensions that this UTI represents",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "id"
+                ]
+            }
+        }
+    }
+}
