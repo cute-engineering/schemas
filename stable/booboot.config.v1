@@ -1,0 +1,60 @@
+{
+    "$id": "https://schemas.cute.engineering/stable/booboot.config.v1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "A representation of a configuration file for Booboot",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "description": "The schema that this manifest conforms to",
+            "type": "string"
+        },
+        "entries": {
+            "description": "A list of entries to be added to the boot menu",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "description": "The label to display in the boot menu",
+                        "type": "string"
+                    },
+                    "kernel": {
+                        "description": "The path to the kernel to boot (relative to the root of the boot partition)",
+                        "type": "string"
+                    },
+                    "verbose": {
+                        "description": "Whether the loader should print verbose output",
+                        "type": "boolean"
+                    },
+                    "protocol": {
+                        "description": "The protocol to use to load the kernel",
+                        "type": "string",
+                        "enum": [
+                            "handover"
+                        ]
+                    },
+                    "cmdline": {
+                        "description": "The command line to pass to the kernel",
+                        "type": "string"
+                    },
+                    "modules": {
+                        "description": "A list of modules to pass to the kernel",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "label",
+                    "kernel",
+                    "protocol"
+                ]
+            }
+        },
+        "required": [
+            "entries"
+        ]
+    }
+}
