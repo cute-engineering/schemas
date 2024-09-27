@@ -21,6 +21,10 @@
             "description": "A description of this manifest",
             "type": "string"
         },
+        "version": {
+            "description": "The version of this manifest",
+            "type": "string"
+        },
         "extern": {
             "description": "A list of external dependencies",
             "type": "object",
