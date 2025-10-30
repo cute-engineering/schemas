@@ -1,0 +1,32 @@
+{
+    "$id": "https://schemas.cute.engineering/stable/cutekit.lockfile.v1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Extern lockfile for CuteKit",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "extern": {
+            "type": "object",
+            "patternProperties": {
+                ".*": {
+                    "type": "object",
+                    "properties": {
+                        "additionalProperties": false
+                    },
+                    "git": {
+                        "description": "The git repository to clone",
+                        "type": "string"
+                    },
+                    "tag": {
+                        "description": "The tag to checkout",
+                        "type": "string"
+                    },
+                    "commit": {
+                        "description": "The commit hash to checkout",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

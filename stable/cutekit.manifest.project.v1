@@ -34,7 +34,7 @@
                     "properties": {
                         "additionalProperties": false,
                         "id": {
-                            "$comment": "@since(0.7)",
+                            "$comment": "@since(0.7) @removed(0.10)",
                             "description": "The unique identifier for this dependency",
                             "type": "string"
                         },
@@ -55,13 +55,13 @@
                             "type": "string"
                         },
                         "shallow": {
-                            "$comment": "@since(0.7)",
+                            "$comment": "@since(0.7) @removed(0.10)",
                             "description": "Should the repository be cloned shallowly",
                             "type": "boolean",
                             "default": true
                         },
                         "depth": {
-                            "$comment": "@since(0.7)",
+                            "$comment": "@since(0.7) @removed(0.10)",
                             "description": "The depth to clone the repository",
                             "type": "integer",
                             "default": 1
